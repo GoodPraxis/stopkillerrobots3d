@@ -2,7 +2,7 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import ProgressBar from 'progressbar.js';
+import ProgressBar from "progressbar.js";
 import { lerp } from "three/src/math/MathUtils";
 // import { WireframeGeometry2 } from 'three/examples/jsm/WireframeGeometry2.js'; /// I HAVE IMPORTED THIS BUT I HAVE NOT INSTALLED IT!
 
@@ -301,13 +301,12 @@ let max_duration = 0;
 if (
   url[url.length - 1] == "history1.html" ||
   url[url.length - 1] == "history2.html" ||
-  url[url.length - 1] == "history3.html") {
-    max_duration = dictTimes1["Scene5"];
-} else if (
-  url[url.length - 1] == "final.html") {
-    max_duration = dictTimes1["Scene10"];
-}
-else  {
+  url[url.length - 1] == "history3.html"
+) {
+  max_duration = dictTimes1["Scene5"];
+} else if (url[url.length - 1] == "final.html") {
+  max_duration = dictTimes1["Scene10"];
+} else {
   max_duration = dictTimes23["Scene5"];
 }
 
@@ -317,7 +316,6 @@ if (
   url[url.length - 1] == "history3.html" ||
   url[url.length - 1] == "final.html"
 ) {
-
   var bar = new ProgressBar.Line(container, {
     strokeWidth: 0.5,
     easing: "easeInOut",
@@ -468,7 +466,7 @@ let startTime = 0;
 const clock = new THREE.Clock();
 
 const tick = () => {
-//  console.log("The first tick will appear only after the all objects are loaded :) ");
+  //  console.log("The first tick will appear only after the all objects are loaded :) ");
   // Clock
   const elapsedTime = clock.getElapsedTime();
 
@@ -662,9 +660,7 @@ const tick = () => {
       document.getElementById("text2").style.textAlign = "center";
       document.getElementById("text2").style.maxWidth = "1258px";
       document.getElementById("text2").innerHTML =
-        "Facial recognition technology takes your face and transforms it into data points.";
-      document.getElementById("text3").innerHTML =
-        "The algorithm compares the data points and determines if there is a match";
+        "Facial recognition technology takes your face and transforms it into data points. The algorithm compares the data points and determines if there is a match.";
     }
     // -------------------- Scene 4
     if (elapsedTime > dictTimes1["Scene4"]) {
@@ -673,7 +669,7 @@ const tick = () => {
       document.getElementById("text1").style.padding =
         "148px 226px 148px 226px"; // change to make it responsive
       document.getElementById("text2").style.maxWidth = "1467px";
-      document.getElementById("text2").style.fontSize = "180px";
+      document.getElementById("text2").style.fontSize = "5vh";
       document.getElementById("text2").innerHTML =
         "These faces have a match percentage of 98%";
       document.getElementById("text3").innerHTML = "";
@@ -837,7 +833,7 @@ const tick = () => {
       });
       document.getElementById("text1").style.alignItems = "center";
       document.getElementById("text2").style.maxWidth = "1467px";
-      document.getElementById("text2").style.fontSize = "180px";
+      document.getElementById("text2").style.fontSize = "5vh";
       document.getElementById("text2").style.textAlign = "center";
       document.getElementById("text2").style.maxWidth = "1258px";
       document.getElementById("text2").innerHTML =
@@ -973,7 +969,7 @@ const tick = () => {
       }
       if (elapsedTime > startTime + objectsmovementdelay + 1) {
         document.getElementById("text2").style.opacity = 1;
-        document.getElementById("text2").style.paddingTop = '5%';
+        document.getElementById("text2").style.paddingTop = "5%";
         document.getElementById("text2").innerHTML = "Their profile match 95%";
         document.getElementById("text1").style.alignItems = "flex-end";
         document.getElementById("text2").style.textAlign = "right";
@@ -1020,7 +1016,7 @@ const tick = () => {
 
       document.getElementById("text1").style.alignItems = "center";
       document.getElementById("text2").style.maxWidth = "1467px";
-      document.getElementById("text2").style.fontSize = "180px";
+      document.getElementById("text2").style.fontSize = "5vh";
       document.getElementById("text2").style.textAlign = "center";
       document.getElementById("text2").style.maxWidth = "1258px";
       document.getElementById("text2").innerHTML =
@@ -1037,10 +1033,8 @@ const tick = () => {
   ////////////// -----------------------------------------------------------------------------------------------------
   // SCRIPT FOR COMPARE 1 [scene 5]
   if (tmp[tmp.length - 1] == "compare-face1.html") {
-
     document.getElementById("background-compare-id").style.opacity = 1;
     if (elapsedTime > initdelay) {
-
       //uncomment to add in fade for faces
       //opacityBackground("background-compare-id");
       document.getElementById("background-compare-id").style.opacity = 0;
@@ -1120,7 +1114,6 @@ const tick = () => {
       scene.getObjectByName("face2-explore").visible = true;
       scene.getObjectByName("face3-explore").visible = true;
 
-
       // console.log(scene)
       scene.remove(scene.getObjectByName("face-leftface1/"));
       scene.remove(scene.getObjectByName("face-rightface1/"));
@@ -1169,17 +1162,15 @@ const tick = () => {
         Math.sin(elapsedTime * delay) * rangeMovement;
 
       scene.getObjectByName("face-leftface1/").traverse((node) => {
-
         if (!node.isMesh) return;
         node.material.wireframe = true;
-        node.material.color.setHex(0x3C7AF2);
-
+        node.material.color.setHex(0x3c7af2);
       });
 
       scene.getObjectByName("face-rightface2/").traverse((node) => {
         if (!node.isMesh) return;
         node.material.wireframe = true;
-        node.material.color.setHex(0x3C7AF2);
+        node.material.color.setHex(0x3c7af2);
       });
 
       camera.position.copy(new THREE.Vector3(0, 4, 100));
@@ -1218,7 +1209,7 @@ const tick = () => {
         scene.getObjectByName("face-rightface1/").traverse((node) => {
           if (!node.isMesh) return;
           node.material.wireframe = true;
-          node.material.color.setHex(0xC3F23C);
+          node.material.color.setHex(0xc3f23c);
           scene
             .getObjectByName("face-rightface1/")
             .position.copy(new THREE.Vector3(6.5, -5, 0));
@@ -1252,7 +1243,7 @@ const tick = () => {
           startTime,
           startTime + objectsmovementdelay
         );
-        document.getElementById("text-final").style.marginTop = "200px";
+        document.getElementById("text-final").style.marginTop = "10vh";
         document.getElementById("text-final").innerHTML =
           "Why is this a problem? The biometric data can be linked to your name, school, or criminal history.<br><br>Can you think about any potential negative consequences?";
 
@@ -1271,7 +1262,7 @@ const tick = () => {
 
         document.getElementById("text-final").innerHTML =
           "What if your<br>doppelg&#228nger is on a no-fly list?";
-        document.getElementById("text-final").style.marginTop = "350px";
+        document.getElementById("text-final").style.marginTop = "10vh";
         // document.getElementById("text-final").style.fontSize = `${(Math.sin(elapsedTime * delay) * 25)+ 50}px`
         if (bouncingfont1 < 80) {
           document.getElementById(
@@ -1281,8 +1272,9 @@ const tick = () => {
         }
       }
       if (elapsedTime > dictTimes1["Scene8"] + 10) {
+        document.getElementById("text-final").style.fontSize = "6vh";
         document.getElementById("text-final").innerHTML =
-          "What happens if you don’t consent to your <br> photo being processed and it’s mislabeled <br> in the system forever?";
+          "What happens if you don’t consent to your photo being processed and it’s mislabeled in the system forever?";
         if (bouncingfont2 < 80) {
           document.getElementById(
             "text-final"
@@ -1290,7 +1282,7 @@ const tick = () => {
           bouncingfont2 += 1;
         }
       }
-      if (elapsedTime > dictTimes1["Scene8"] + 20)  {
+      if (elapsedTime > dictTimes1["Scene8"] + 20) {
         // document.getElementById("text-final").innerHTML = 'Or if you’re simply not Caucasian or a man? <br> <br> <font size="20"> As researchers like Joy Buolamwini discovered, <br> this technology does not work the <br> same for all and is predominantly <br> negative towards black women</font>'
         document.getElementById("text-final").innerHTML =
           "Or if you’re simply not Caucasian or a man? <br> <br> ";
@@ -1313,7 +1305,7 @@ const tick = () => {
         div.style.color = "white";
         div.style.fontSize = "30px";
         div.innerHTML =
-          "As researchers like Joy Buolamwini discovered, this technology does not work <br>the same for all and is predominantly negative towards black women";
+          "As researchers like Joy Buolamwini discovered, this technology does not work <br>the same for all and is predominantly negative towards black women.";
 
         if (
           document.getElementById("Joy") == null &&
@@ -1329,9 +1321,10 @@ const tick = () => {
         if (document.getElementById("Joy") != null) {
           document.getElementById("Joy").remove();
         }
+        document.getElementById("text-final").style.fontSize = "6vh";
         document.getElementById("text-final").innerHTML =
           "And even if your face is “correctly” identified, you have still been reduced to numbers to be processed.<br><br> We accept these machines as factually correct when all they’re doing is using mathematical probabilities.";
-        document.getElementById("text-final").style.marginTop = "120px";
+        document.getElementById("text-final").style.marginTop = "10vh";
         scene.getObjectByName("face-leftface1/").visible = true;
         scene.getObjectByName("face-rightface1/").visible = true;
         scene.getObjectByName("face-rightface1/").traverse((node) => {
