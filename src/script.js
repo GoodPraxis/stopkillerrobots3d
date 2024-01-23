@@ -18,6 +18,7 @@ WebFont.load({
 
 // -----------------------------------------------------------------------------------
 
+const CDN_PATH = "https://infinity.ams3.cdn.digitaloceanspaces.com";
 /**
  * Loaders
  */
@@ -152,7 +153,7 @@ const faceSizes = {
 
 folder_name.forEach((facename) => {
   // LEFT FACE ----
-  gltfLoader.load("../models/" + facename + "1-face.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "1-face.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][0],
       faceSizes[facename][0],
@@ -164,7 +165,7 @@ folder_name.forEach((facename) => {
     scene.add(gltf.scene);
   });
 
-  gltfLoader.load("../models/" + facename + "1-linechin.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "1-linechin.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][0],
       faceSizes[facename][0],
@@ -176,7 +177,7 @@ folder_name.forEach((facename) => {
     scene.add(gltf.scene);
   });
 
-  gltfLoader.load("../models/" + facename + "1-lineprofile.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "1-lineprofile.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][0],
       faceSizes[facename][0],
@@ -189,7 +190,7 @@ folder_name.forEach((facename) => {
   });
 
   // RIGHT FACE ----
-  gltfLoader.load("../models/" + facename + "2-face.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "2-face.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][1],
       faceSizes[facename][1],
@@ -201,7 +202,7 @@ folder_name.forEach((facename) => {
     scene.add(gltf.scene);
   });
 
-  gltfLoader.load("../models/" + facename + "2-linechin.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "2-linechin.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][1],
       faceSizes[facename][1],
@@ -213,7 +214,7 @@ folder_name.forEach((facename) => {
     scene.add(gltf.scene);
   });
 
-  gltfLoader.load("../models/" + facename + "2-lineprofile.glb", (gltf) => {
+  gltfLoader.load(CDN_PATH + "/models/" + facename + "2-lineprofile.glb", (gltf) => {
     gltf.scene.scale.set(
       faceSizes[facename][1],
       faceSizes[facename][1],
