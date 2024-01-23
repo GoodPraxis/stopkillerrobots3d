@@ -1264,22 +1264,22 @@ const tick = () => {
           "What if your<br>doppelg&#228nger is on a no-fly list?";
         document.getElementById("text-final").style.marginTop = "10vh";
         // document.getElementById("text-final").style.fontSize = `${(Math.sin(elapsedTime * delay) * 25)+ 50}px`
-        if (bouncingfont1 < 80) {
+        if (bouncingfont1 < 10) {
           document.getElementById(
             "text-final"
-          ).style.fontSize = `${bouncingfont1}px`;
-          bouncingfont1 += 1;
+          ).style.fontSize = `${bouncingfont1}vh`;
+          bouncingfont1 += 0.4;
         }
       }
       if (elapsedTime > dictTimes1["Scene8"] + 10) {
         document.getElementById("text-final").style.fontSize = "6vh";
         document.getElementById("text-final").innerHTML =
           "What happens if you don’t consent to your photo being processed and it’s mislabeled in the system forever?";
-        if (bouncingfont2 < 80) {
+        if (bouncingfont2 < 6) {
           document.getElementById(
             "text-final"
-          ).style.fontSize = `${bouncingfont2}px`;
-          bouncingfont2 += 1;
+          ).style.fontSize = `${bouncingfont2}vh`;
+          bouncingfont2 += 0.2;
         }
       }
       if (elapsedTime > dictTimes1["Scene8"] + 20) {
@@ -1287,11 +1287,11 @@ const tick = () => {
         document.getElementById("text-final").innerHTML =
           "Or if you’re simply not Caucasian or a man? <br> <br> ";
 
-        if (bouncingfont3 < 80) {
+        if (bouncingfont3 < 6) {
           document.getElementById(
             "text-final"
-          ).style.fontSize = `${bouncingfont3}px`;
-          bouncingfont3 += 1;
+          ).style.fontSize = `${bouncingfont3}vh`;
+          bouncingfont3 += 0.2;
         }
         // const element = document.getElementById('boxes');
         if (document.getElementById("boxes") != null) {
